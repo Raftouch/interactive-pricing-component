@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body {
+    background: url(images/bg-pattern.svg) no-repeat; 
+    background-color: hsl(230, 100%, 99%);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 3rem;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    color: hsl(225, 20%, 60%);
+}
+.heading {
+    background: url(images/pattern-circles.svg) no-repeat center;
+    min-height: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+h2, #price {
+    color: hsl(227, 35%, 25%);
+}
+.main-div {
+    min-height: 350px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas: 
+    "pageviews monthly-price"
+    "range range"
+    "billing billing"
+    "ul button";
+    background: hsl(0, 0%, 100%);
+    padding: 40px;
+    border-radius: 0.8rem;
+    box-shadow: 0 10px 10px 10px hsl(224, 65%, 95%);
+    align-items: center;
+    gap: 1.5rem;
+}
+#pageviews {
+    grid-area: pageviews;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: smaller;
+}
+#monthly-price {
+    grid-area: monthly-price;
+    text-align: right;
+}
+#range {
+    grid-area: range;
+}
+#billing {
+    grid-area: billing;
+    border-bottom: 1px solid hsl(223, 50%, 87%);
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 30px;
+    font-size:smaller;
+    justify-content: flex-end;
+}
+#ul {
+    grid-area: ul;
+    list-style-image: url(images/icon-check.svg);
+    margin-left: 1rem;
+    line-height: 2rem;
+    font-size: smaller;
+}
+#button {
+    grid-area: button;
+    background: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#button:hover {
+    /* opacity: 0.8; */
+    scale: 1.05;
+}
+#price {
+    font-weight: 800;
+    font-size: x-large;
+}
+/* .discount {
+    visibility: hidden;
+} */
+.discount, .discount-mobile {
+    background: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 0 10px;
+    border-radius: 50px;
+    font-size: smaller;
+}
+.discount-mobile {
+    display: none;
+    width: max-content;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  /* .slider.round */
+.round {
+    border-radius: 50px;
+}
+.round:before {
+    border-radius: 50%;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: hsl(174, 77%, 80%); */
+    background-color: hsl(223, 50%, 87%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:hover {
+    background-color: hsl(174, 77%, 80%);
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    top: 2px;
+    background-color: hsl(0, 0%, 100%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: hsl(223, 50%, 87%);
+}
+input:checked + .slider:hover {
+    background-color: hsl(174, 77%, 80%);
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px hsl(223, 50%, 87%);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+#slider-bar-range {
+    width: 420px;
+    position: relative;
+}
+#slider-bar {
+    background: hsl(224, 65%, 95%);
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 50px;
+    position: relative;
+    /* background: linear-gradient(90deg, rgb(16, 213, 194) 10%, rgb(234, 238, 251) 10%); */
+    outline: none;
+    /* -moz-appearance: none; */
+}
+#slider-bar::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: hsl(174, 86%, 45%);
+    background-image: url(images/icon-slider.svg);
+    border-radius: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 10px 3px hsl(174, 77%, 80%);
+    cursor: pointer;
+    border: none;
+}
+input[type="range"]::-moz-range-progress {
+    background-color: hsl(174, 86%, 45%);
+    height: 0.5rem;
+    border-radius: 50px;
+}
+
+
+
+
+@media (max-width: 550px) {
+    .main-div {
+        width: 360px;
+        height: 450px;
+        padding: 30px;
+        grid-template-areas:
+        "pageviews"
+        "range"
+        "monthly-price"
+        "billing"
+        "ul"
+        "button";
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .heading-span {
+        display: table;
+        margin: auto;
+    }
+    .discount-mobile {
+        display: inline-block;
+    }
+    .discount {
+        display: none;
+    }
+    ul, #monthly-price, #pageviews {
+        text-align: center;
+    }
+    #slider-bar-range {
+        width: 300px;
+    }
+    #button {
+        margin: auto;
+    }
+}

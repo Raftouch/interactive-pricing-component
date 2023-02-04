@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
+  <!--  -->
+</head>
+
+<body>
+  <div class="heading">
+    <h2>Simple, traffic-based pricing</h2>
+    <div class="heading-p">
+      <p>Sign-up for our 30-day trial. <span class="heading-span">No credit card required.</span></p>
+    </div>
+  </div>
+  
+  <div class="main-div">
+    <div id="pageviews">
+      <!-- <span id="k-pageviews"></span>k Pageviews -->
+      <span id="k-pageviews"></span> Pageviews
+    </div>
+    <div id="monthly-price">
+      <span id="price">$<span id="m-price"></span>.00</span> / month
+    </div>
+    <div id="slider-bar-range">
+      <input type="range" min="10" max="1000" step="10" id="slider-bar">
+      <!-- <div id="slider-bar"></div> -->
+      <div id="icon-slider"></div>
+    </div>
+    <div id="billing">
+      <p>Monthly Billing</p>
+      <label class="switch">
+        <input id="input-check" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <p>Yearly Billing  
+        <span class="discount">25% discount</span>
+        <span class="discount-mobile">-25%</span>
+      </p>
+    </div>
+    <ul id="ul">
+      <li>Unlimited websites</li>
+      <li>100% data ownership</li>
+      <li>Email reports</li>
+    </ul>
+    <button id="button">Start my trial</button>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nelli</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
