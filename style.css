@@ -89,7 +89,6 @@ h2, #price {
     cursor: pointer;
 }
 #button:hover {
-    /* opacity: 0.8; */
     scale: 1.05;
 }
 #price {
@@ -121,7 +120,6 @@ h2, #price {
     width: 0;
     height: 0;
 }
-  /* .slider.round */
 .round {
     border-radius: 50px;
 }
@@ -135,7 +133,6 @@ h2, #price {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: hsl(174, 77%, 80%); */
     background-color: hsl(223, 50%, 87%);
     -webkit-transition: .4s;
     transition: .4s;
@@ -181,9 +178,7 @@ input:checked + .slider:before {
     height: 0.5rem;
     border-radius: 50px;
     position: relative;
-    /* background: linear-gradient(90deg, rgb(16, 213, 194) 10%, rgb(234, 238, 251) 10%); */
     outline: none;
-    /* -moz-appearance: none; */
 }
 #slider-bar::-moz-range-thumb {
     width: 30px;
@@ -218,8 +213,6 @@ input[type="range"]::-moz-range-progress {
         "billing"
         "ul"
         "button";
-        /* display: flex;
-        flex-direction: column; */
     }
     .heading-span {
         display: table;
